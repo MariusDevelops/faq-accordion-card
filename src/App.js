@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./dist/App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <h1>FAQ</h1>
+      <p>How many team members can I invite?</p>
+      <p>What is the maximum file upload size?</p>
+      <p>
+        No more that 2GB. All files in your account must fit your allotted
+        storage space.
+      </p>
+      <p>How do I reset my password?</p>
+      <p>Can I cancel my subscription?</p>
+      <p>Do you provide additional support?</p>
+    </main>
   );
 }
 
