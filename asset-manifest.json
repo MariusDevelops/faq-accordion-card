@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/MariusDevelops/faq-accordion-card/static/css/main.2f0c7fda.chunk.css",
-    "main.js": "/MariusDevelops/faq-accordion-card/static/js/main.ccbc2708.chunk.js",
-    "main.js.map": "/MariusDevelops/faq-accordion-card/static/js/main.ccbc2708.chunk.js.map",
-    "runtime-main.js": "/MariusDevelops/faq-accordion-card/static/js/runtime-main.62e00d95.js",
-    "runtime-main.js.map": "/MariusDevelops/faq-accordion-card/static/js/runtime-main.62e00d95.js.map",
-    "static/js/2.39b734b3.chunk.js": "/MariusDevelops/faq-accordion-card/static/js/2.39b734b3.chunk.js",
-    "static/js/2.39b734b3.chunk.js.map": "/MariusDevelops/faq-accordion-card/static/js/2.39b734b3.chunk.js.map",
-    "index.html": "/MariusDevelops/faq-accordion-card/index.html",
-    "static/css/main.2f0c7fda.chunk.css.map": "/MariusDevelops/faq-accordion-card/static/css/main.2f0c7fda.chunk.css.map",
-    "static/js/2.39b734b3.chunk.js.LICENSE.txt": "/MariusDevelops/faq-accordion-card/static/js/2.39b734b3.chunk.js.LICENSE.txt"
+    "main.css": "/faq-accordion-card/static/css/main.2f0c7fda.chunk.css",
+    "main.js": "/faq-accordion-card/static/js/main.ccbc2708.chunk.js",
+    "main.js.map": "/faq-accordion-card/static/js/main.ccbc2708.chunk.js.map",
+    "runtime-main.js": "/faq-accordion-card/static/js/runtime-main.dee92029.js",
+    "runtime-main.js.map": "/faq-accordion-card/static/js/runtime-main.dee92029.js.map",
+    "static/js/2.39b734b3.chunk.js": "/faq-accordion-card/static/js/2.39b734b3.chunk.js",
+    "static/js/2.39b734b3.chunk.js.map": "/faq-accordion-card/static/js/2.39b734b3.chunk.js.map",
+    "index.html": "/faq-accordion-card/index.html",
+    "static/css/main.2f0c7fda.chunk.css.map": "/faq-accordion-card/static/css/main.2f0c7fda.chunk.css.map",
+    "static/js/2.39b734b3.chunk.js.LICENSE.txt": "/faq-accordion-card/static/js/2.39b734b3.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.62e00d95.js",
+    "static/js/runtime-main.dee92029.js",
     "static/js/2.39b734b3.chunk.js",
     "static/css/main.2f0c7fda.chunk.css",
     "static/js/main.ccbc2708.chunk.js"
