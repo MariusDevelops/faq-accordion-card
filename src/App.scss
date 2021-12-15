@@ -32,47 +32,38 @@ body {
   height: 100vh;
 }
 
-// .container {
-//   display: flex;
-//   background-color: #fff;
-//   border-radius: 20px;
-//   // height: 90vh;
-//   // width: 90vw;
-//   margin: 100px 20px;
-//   padding: 20px;
-// }
-
+////////////////// ILLUSTRATION /////////////////
 .mobIllustration {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
-  // height: auto;
-  // max-width: 75%;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 300px;
-  height: auto;
-  margin: 50px 100px;
+  position: relative;
+  height: 100px;
+  // background-color: red;
   .mobImage {
-    position: relative;
-    top: 0px;
-    right: 0px;
+    width: 90%;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
   }
   .mobImage2 {
-    position: relative;
-    top: -50px;
-    right: -30px;
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    // display: block;
+    // margin: 0 auto;
   }
 }
 
+////////////// GENERAL STYLES //////////////
 h1 {
   color: $very-dark-desaturated-blue;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
-  padding-top: 150px;
-  padding-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 input {
@@ -81,12 +72,13 @@ input {
   z-index: -1;
 }
 
-.row {
+.container {
   display: flex;
   background-color: #fff;
   border-radius: 20px;
-  margin: 200px 40px;
-  padding: 20px;
+  margin: 150px 30px 100px;
+  padding: 0px 0px 40px;
+  box-shadow: 0px 30px 80px 10px hsl(240, 73%, 60%);
   .col {
     flex: 1; // Let all the flexible items be the same length, regardless of its content
     &:last-child {
@@ -95,11 +87,11 @@ input {
   }
 }
 
-/* Accordion styles */
+/* /////////// Accordion styleS ////////////// */
 .tabs {
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  // box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 .tab {
@@ -110,13 +102,15 @@ input {
     justify-content: space-between;
     padding: 1em;
     font-weight: 400;
+    color: $very-dark-desaturated-blue;
     cursor: pointer;
     // Icon
     &:hover {
       color: $soft-red;
     }
     &::after {
-      content: "\276F"; //arrow unicode
+      //content: "\276F"; //arrow unicode
+      content: url(../images/icon-arrow-down.svg);
       width: 1em; // 2em = font-size x2
       height: 1em;
       text-align: center;
@@ -128,19 +122,29 @@ input {
     padding: 0 1em;
     background: white;
     transition: all 0.35s;
+    color: $dark-grayish-blue;
   }
 }
 
-// :checked
+//////////// :checked ////////////////
 input:checked {
   + .tab-label {
-    color: $soft-red;
+    color: $very-dark-desaturated-blue;
+    font-weight: 700;
     &::after {
-      transform: rotate(90deg);
+      transform: rotate(180deg);
     }
   }
   ~ .tab-content {
     max-height: 100vh;
     padding: 1em;
   }
+}
+
+////////// DIVIDERS ///////////
+.dividers {
+  background-color: $light-grayish-blue;
+  height: 2px;
+  border: none;
+  margin: 0px 10px;
 }

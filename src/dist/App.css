@@ -16,24 +16,27 @@ body {
 }
 
 .mobIllustration {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 300px;
-  height: auto;
-  margin: 50px 100px;
+  position: relative;
+  height: 100px;
 }
 
 .mobIllustration .mobImage {
-  position: relative;
-  top: 0px;
-  right: 0px;
+  width: 90%;
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .mobIllustration .mobImage2 {
-  position: relative;
-  top: -50px;
-  right: -30px;
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -41,8 +44,8 @@ h1 {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
-  padding-top: 150px;
-  padding-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
 input {
@@ -51,32 +54,32 @@ input {
   z-index: -1;
 }
 
-.row {
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #fff;
   border-radius: 20px;
-  margin: 200px 40px;
-  padding: 20px;
+  margin: 150px 30px 100px;
+  padding: 0px 0px 40px;
+  -webkit-box-shadow: 0px 30px 80px 10px #4f4fe3;
+          box-shadow: 0px 30px 80px 10px #4f4fe3;
 }
 
-.row .col {
+.container .col {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
 }
 
-.row .col:last-child {
+.container .col:last-child {
   margin: 1em;
 }
 
-/* Accordion styles */
+/* /////////// Accordion styleS ////////////// */
 .tabs {
   border-radius: 8px;
   overflow: hidden;
-  -webkit-box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 .tab {
@@ -93,6 +96,7 @@ input {
           justify-content: space-between;
   padding: 1em;
   font-weight: 400;
+  color: #1d1e35;
   cursor: pointer;
 }
 
@@ -101,7 +105,7 @@ input {
 }
 
 .tab-label::after {
-  content: "\276F";
+  content: url(../images/icon-arrow-down.svg);
   width: 1em;
   height: 1em;
   text-align: center;
@@ -115,19 +119,28 @@ input {
   background: white;
   -webkit-transition: all 0.35s;
   transition: all 0.35s;
+  color: #787887;
 }
 
 input:checked + .tab-label {
-  color: #f47c57;
+  color: #1d1e35;
+  font-weight: 700;
 }
 
 input:checked + .tab-label::after {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 input:checked ~ .tab-content {
   max-height: 100vh;
   padding: 1em;
+}
+
+.dividers {
+  background-color: #e7e7e9;
+  height: 2px;
+  border: none;
+  margin: 0px 10px;
 }
 /*# sourceMappingURL=App.css.map */

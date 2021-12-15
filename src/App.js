@@ -4,8 +4,8 @@ import mobImage2 from "./images/bg-pattern-mobile.svg";
 
 function App() {
   return (
-    <main className="row">
-      <section className={("container", "col")}>
+    <main className="container">
+      <section className="col">
         <Illustration />
         <Title />
         <div className="tabs">
@@ -23,8 +23,12 @@ function App() {
 const Illustration = () => {
   return (
     <div className="mobIllustration">
-      <img className="mobImage" src={mobImage} alt="mobile illustration" />;
-      <img className="mobImage2" src={mobImage2} alt="mobile illustration" />;
+      <div>
+        <img className="mobImage" src={mobImage} alt="mobile illustration" />
+      </div>
+      <div>
+        <img className="mobImage2" src={mobImage2} alt="mobile illustration" />
+      </div>
     </div>
   );
 };
@@ -42,6 +46,7 @@ const FirstTab = () => {
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
         reiciendis!
       </div>
+      <hr className="dividers"></hr>
     </div>
   );
 };
@@ -57,6 +62,7 @@ const SecondTab = () => {
         No more that 2GB. All files in your account must fit your allotted
         storage space.
       </div>
+      <hr className="dividers"></hr>
     </div>
   );
 };
@@ -72,6 +78,7 @@ const ThirdTab = () => {
         No more that 2GB. All files in your account must fit your allotted
         storage space.
       </div>
+      <hr className="dividers"></hr>
     </div>
   );
 };
@@ -87,6 +94,7 @@ const FourthTab = () => {
         No more that 2GB. All files in your account must fit your allotted
         storage space.
       </div>
+      <hr className="dividers"></hr>
     </div>
   );
 };
@@ -96,9 +104,10 @@ const FifthTab = () => {
     <div className="tab">
       <input type="checkbox" id="chck5" />
       <label className="tab-label" htmlFor="chck5">
-        What is the maximum file upload size?
+        Do you provide additional support?
       </label>
-      <div className="tab-content">Do you provide additional support?</div>
+      <div className="tab-content">Sure whatevet you need!</div>
+      <hr className="dividers"></hr>
     </div>
   );
 };
