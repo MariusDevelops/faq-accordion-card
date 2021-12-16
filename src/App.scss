@@ -26,10 +26,117 @@ $light-grayish-blue: hsl(240, 5%, 91%);
 body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 12px;
-  background-color: $soft-violet;
-  background-image: linear-gradient($soft-violet, $soft-blue);
-  background-repeat: no-repeat;
-  height: 100vh;
+  background: linear-gradient($soft-violet, $soft-blue) fixed;
+}
+
+@media (min-width: 1000px) {
+  /////////// WRAPER ////////////
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    margin: 150px auto;
+    border-radius: 20px;
+    height: 450px;
+    width: 800px;
+    box-shadow: 0px 30px 80px 10px hsl(240, 73%, 60%);
+  }
+  //////////// SECTION1 ///////////////
+  .deskIllustration {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    // overflow: hidden;
+    //background-color: rgb(151, 143, 199);
+    .deskImageBox {
+      height: 160px;
+      width: auto;
+      position: absolute;
+      top: 60%;
+      left: 0%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+    .overflow {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+    }
+    .deskImage {
+      height: 300px;
+      width: auto;
+      position: absolute;
+      top: 50%;
+      left: 35%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+    }
+    .deskImage2 {
+      height: 800px;
+      width: auto;
+      position: absolute;
+      top: 40%;
+      left: -20%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .section1 {
+    display: none;
+  }
+}
+
+////////////// SECTION2 GENERAL STYLES //////////////
+h1 {
+  color: $very-dark-desaturated-blue;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  @media (min-width: 1000px) {
+    text-align: left;
+    padding-top: 40px;
+  }
+}
+
+input {
+  position: absolute;
+  opacity: 0; // hides checker
+  z-index: -1;
+}
+
+.flex-section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 1000px) {
+    display: grid;
+  }
+}
+
+.section2 {
+  background-color: #fff;
+  border-radius: 20px;
+  margin: 200px 30px 100px;
+  max-width: 400px;
+  padding: 0px 0px 40px;
+  box-shadow: 0px 30px 80px 10px hsl(240, 73%, 60%);
+  @media (min-width: 1000px) {
+    margin: 0;
+    padding-right: 100px;
+    max-width: 100%;
+    box-shadow: none;
+  }
+  .col {
+    flex: 1; // Let all the flexible items be the same length, regardless of its content
+    &:last-child {
+      margin: 1em;
+    }
+  }
 }
 
 ////////////////// ILLUSTRATION /////////////////
@@ -54,36 +161,8 @@ body {
     // display: block;
     // margin: 0 auto;
   }
-}
-
-////////////// GENERAL STYLES //////////////
-h1 {
-  color: $very-dark-desaturated-blue;
-  text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-input {
-  position: absolute;
-  opacity: 0; // hides checker
-  z-index: -1;
-}
-
-.container {
-  display: flex;
-  background-color: #fff;
-  border-radius: 20px;
-  margin: 150px 30px 100px;
-  padding: 0px 0px 40px;
-  box-shadow: 0px 30px 80px 10px hsl(240, 73%, 60%);
-  .col {
-    flex: 1; // Let all the flexible items be the same length, regardless of its content
-    &:last-child {
-      margin: 1em;
-    }
+  @media (min-width: 1000px) {
+    display: none;
   }
 }
 
@@ -105,8 +184,11 @@ input {
     color: $very-dark-desaturated-blue;
     cursor: pointer;
     // Icon
-    &:hover {
-      color: $soft-red;
+    @media (min-width: 1000px) {
+      padding: 1em 0em;
+      &:hover {
+        color: $soft-red;
+      }
     }
     &::after {
       //content: "\276F"; //arrow unicode
@@ -132,12 +214,12 @@ input:checked {
     color: $very-dark-desaturated-blue;
     font-weight: 700;
     &::after {
-      transform: rotate(180deg);
+      transform: rotate(-180deg);
     }
   }
   ~ .tab-content {
     max-height: 100vh;
-    padding: 1em;
+    padding: 0em 1em 1em;
   }
 }
 
@@ -147,4 +229,33 @@ input:checked {
   height: 2px;
   border: none;
   margin: 0px 10px;
+  @media (min-width: 1000px) {
+    margin: 0px;
+  }
+}
+
+///////////// FOOTER ///////////////
+.attribution {
+  text-align: center;
+  font-weight: 400;
+  font-size: 9px;
+  color: white;
+  padding-bottom: 20px;
+  @media (min-width: 1000px) {
+    font-size: 12px;
+  }
+  p {
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      &:hover {
+        cursor: pointer;
+        transition: 0.5s ease;
+        @media (min-width: 1000px) {
+          color: $soft-red;
+        }
+      }
+    }
+  }
 }
